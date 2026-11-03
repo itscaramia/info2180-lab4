@@ -1,14 +1,89 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
+    background-color: #101827;
+    color: white;
+    min-height: 100vh;
+    padding: 60px 20px;
 }
 
 h1 {
-    color: blue;
+    text-align: center;
+    font-size: 36px;
+    color: #a78bfa;
+    margin-bottom: 35px;
 }
 
-button {
-    padding: 10px 20px;
+#search {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto 15px;
+    padding: 14px;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    background-color: #1e293b;
+    color: white;
+    font-size: 16px;
+}
+
+#search::placeholder {
+    color: #94a3b8;
+}
+
+#searchBtn {
+    display: block;
+    margin: 0 auto 30px;
+    padding: 12px 35px;
+    background-color: #8b5cf6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
     cursor: pointer;
+}
+
+#searchBtn:hover {
+    background-color: #7c3aed;
+}
+
+#result {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: #1e293b;
+    border-radius: 12px;
+    line-height: 1.7;
+}
+
+#result ul {
+    padding-left: 25px;
+}
+
+#result li {
+    padding: 5px 0;
+    color: #c4b5fd;
+}
+
+#result h3 {
+    color: #a78bfa;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+#result h4 {
+    color: #cbd5e1;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#result p {
+    color: #e2e8f0;
+    font-size: 15px;
 }
