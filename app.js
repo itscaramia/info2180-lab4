@@ -1,16 +1,19 @@
 
 const searchBtn = document.getElementById("searchBtn");
+const searchInput = document.getElementById("search");
+const result = document.getElementById("result");
 
 searchBtn.addEventListener("click", function() {
 
-    fetch("superheroes.php")
+    const query = searchInput.value.trim();
+
+    fetch("superheroes.php?query=" + encodeURIComponent(query))
         .then(response => response.text())
         .then(data => {
-    const parser = new DOMParser();
-    const html = parser.parseFromString(data, "text/html");
+            result.innerHTML = data;
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
 
-    const superheroes = html.body.innerText;
-
-    alert(superheroes);
-});
 });
